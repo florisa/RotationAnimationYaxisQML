@@ -9,23 +9,35 @@ Window {
 
     Rectangle {
         id: container
-        x: 100
-        y: 100
+        color: "light grey"
+        anchors.centerIn: parent
         width: 600
-        height: 200
+        height: 400
 
         Rectangle {
             id: myRectangle
             width: 50; height: 50
+            x: 290
+            y: 190
             color: "red"
             transform:
                 Rotation {
                 id: yRed
-                origin.x: 50;
-                origin.y: 50;
                 axis { x: 0; y: 1; z: 0; }
                 angle: 0
             }
+        }
+
+        Text {
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: 10
+            color: "grey"
+            wrapMode: Text.WordWrap
+            font.pointSize: 8
+            text: "With a mouse: drag normally, use the vertical wheel to zoom,
+horizontal wheel to rotate, or hold Ctrl while using the vertical wheel to rotate"
         }
     }
 
