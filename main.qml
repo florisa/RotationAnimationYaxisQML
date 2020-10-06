@@ -1,5 +1,5 @@
-import QtQuick 2.9
-import QtQuick.Window 2.3
+import QtQuick 2.14
+import QtQuick.Window 2.14
 
 Window {
     visible: true
@@ -16,15 +16,26 @@ Window {
 
         Rectangle {
             id: myRectangle
-            width: 50; height: 50
-            x: 290
-            y: 190
-            color: "red"
+            width: 160; height: 100
+            border.color: "#E4EAD4"
+            border.width: 3
+            x: 245
+            y: 130
+            color: "#83A8D2"
+            opacity: 0.6
+            //radius: 15
             transform:
                 Rotation {
                 id: yRed
                 axis { x: 0; y: 1; z: 0; }
                 angle: 0
+            }
+
+            Image {
+                id: logo
+                source: "images/inlevel_Logo"
+                anchors.fill: parent
+                //fillMode: Image.PreserveAspectFit
             }
         }
 
